@@ -7,6 +7,7 @@ import classes from './BurgerIngredient.css'
 // doesnt need to have state just cuz its a class component
 class BurgerIngredient extends Component {
     render () {
+        let ingredient = null;
 
         // switch checks if the case exists in the code, i think
         // inside a class to access props with this.
@@ -25,21 +26,21 @@ class BurgerIngredient extends Component {
             case ('meat'):
                 ingredient = <div className={classes.Meat}></div>
                 break;
-            case ('Cheese'):
+            case ('cheese'):
                 ingredient = <div className={classes.Cheese}></div>
                 break;
-            case ('Bacon'):
+            case ('bacon'):
                 ingredient = <div className={classes.Bacon}></div>
                 break;
-            case ('Salad'):
+            case ('salad'):
                 ingredient = <div className={classes.Salad}></div>
                 break;
             default:
                     ingredient = null;
                     
-        return ingredient
-            
-        }
+        
+            }
+            return ingredient;
     }
     
 
@@ -47,8 +48,8 @@ class BurgerIngredient extends Component {
   
 };
 
-BurgerIngredient.PropTypes = {
+BurgerIngredient.propTypes = {
     type: PropTypes.string.isRequired
 };
 
-export default burgerIngredient;
+export default BurgerIngredient;
